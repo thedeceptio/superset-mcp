@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "superset": {
+      "command": "uv",
+      "args": ["--directory", "/ABSOLUTE/PATH/TO/superset-mcp", "run", "superset-mcp"],
+      "env": {
+        "SUPERSET_URL": "http://your-superset-host:8088",
+        "SUPERSET_USERNAME": "your-username",
+        "SUPERSET_PASSWORD": "your-password"
+      }
+    }
+  }
+}
