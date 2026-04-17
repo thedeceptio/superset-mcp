@@ -23,10 +23,11 @@ def execute_sql(
         "sql": sql,
         "runAsync": False,
         "select_as_cta": False,
-        "limit": limit,
     }
     if schema:
         payload["schema"] = schema
+    if limit != 100:
+        payload["limit"] = limit
     return client.post("/api/v1/sqllab/execute/", json=payload)
 
 
